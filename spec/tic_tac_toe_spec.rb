@@ -33,9 +33,9 @@ describe Tic_tac_toe do
 
     # Act
     result = board.show_board
-    
+
     # Assert
-    expect(result).to eq([0, 0, 0],
+    expect(result).to eq([[0, 0, 0],
     [0, 0, 0],
     [0, 0, 0]])
   end
