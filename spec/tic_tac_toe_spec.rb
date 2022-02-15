@@ -20,6 +20,17 @@ describe Tic_tac_toe do
       result = board.player_move
 
       # Assert
-      expect(result).to eq([["X", 0, 0], [0, 0 , 0], [0, 0, 0]])
+      expect(result).to eq([["X", 0, 0],
+                            [0, 0, 0],
+                            [0, 0, 0]]
+                            )
+  end
+
+  it "" do
+    player_positions = {
+      "A1" => [0, 0],
+      "A2" => [0, 1],
+      "A3" => [0, 2]
+    }
   end
 end
