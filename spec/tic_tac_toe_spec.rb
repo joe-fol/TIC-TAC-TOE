@@ -26,11 +26,25 @@ describe Tic_tac_toe do
                             )
   end
 
-  it "" do
-    player_positions = {
-      "A1" => [0, 0],
-      "A2" => [0, 1],
-      "A3" => [0, 2]
-    }
+  it "when show_board is called before any turns are played" do 
+    
+    # Arrange
+    board = described_class.new
+
+    # Act
+    result = board.show_board
+    
+    # Assert
+    expect(result).to eq([0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]])
   end
+
+# #  it "" do
+# #    player_positions = {
+# #      "A1" => [0, 0],
+# #      "A2" => [0, 1],
+# #      "A3" => [0, 2]
+#     }
+# #  end
 end
