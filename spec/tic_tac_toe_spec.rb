@@ -11,6 +11,17 @@ describe Tic_tac_toe do
       # Assert
       expect(result).to eq([['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])
   end
+  
+  it 'when show_board is called, the explicit results in the terminal' do
+    # Arrange
+    board = described_class.new
+
+    #Act
+    test_grid = @grid
+
+    # Assert
+    expect{board.show_board}.to output(test_grid).to_stdout
+  end
 
   it "when player chooses matrix position A1, update matrix position with X" do
       # Arrange
@@ -23,6 +34,5 @@ describe Tic_tac_toe do
       expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
                             )
   end
-
 
 end
