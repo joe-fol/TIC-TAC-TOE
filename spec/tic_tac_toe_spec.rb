@@ -20,9 +20,9 @@ describe Tic_tac_toe do
       result = board.player_move
 
       # Assert
-      expect(result).to eq([["X", "B", "C"],
-                            ["D", "E", "F"],
-                            ["G", "H", "I"]]
+      expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
                             )
   end
+
+
 end

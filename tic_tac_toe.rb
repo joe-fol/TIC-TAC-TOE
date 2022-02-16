@@ -1,6 +1,7 @@
 class Tic_tac_toe
   def initialize
     @grid = [['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
+    @index_of_move
   end
 
   def show_board
@@ -11,8 +12,8 @@ class Tic_tac_toe
   end
   
   def player_move
-    players_board =[["X", 0, 0], [0, 0 , 0], [0, 0, 0]]
-    return players_board
+    proto_grid = [['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']] 
+    return proto_grid
   end
 end
 
