@@ -26,7 +26,10 @@ class Tic_tac_toe
     proto_grid = [['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']] 
     return proto_grid
   end
+
+
 end
+
 
 x = Tic_tac_toe.new
 # puts x.render_board

@@ -12,7 +12,8 @@ describe Tic_tac_toe do
       expect(result).to eq([['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])
   end
   
-  it 'when show_board is called, the explicit results in the terminal' do
+  it 'when show_board is called,
+   the explicit results in the terminal' do
     # Arrange
     board = described_class.new
 
@@ -35,4 +36,14 @@ describe Tic_tac_toe do
                             )
   end
 
+  it "when player puts desired input from the command line save to variable name, move" do 
+    # Arrange
+    input = described_class.new
+
+    # Act
+    result = input.recieve_input
+
+    # Assert
+    expect(result).to eq("A")
+  end
 end
