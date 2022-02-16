@@ -1,7 +1,13 @@
 class Tic_tac_toe
+  def initialize
+    @grid = [['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
+  end
+
   def show_board
-    board_matrix = [["A1", "A2", "A3"], ["B1", "B2", "B3"], ["C1", "C2", "C3"]]
-    # TODO finish of the method  
+    @grid.each do | item | 
+      puts item.each{ | item | item}.join("|")
+      puts '------------'
+    end 
   end
   
   def player_move
