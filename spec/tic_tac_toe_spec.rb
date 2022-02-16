@@ -24,7 +24,7 @@ describe Tic_tac_toe do
     expect{board.show_board}.to output(test_grid).to_stdout
   end
 
-  it "when player chooses matrix position A1, update matrix position with X" do
+  it "when player chooses matrix position A, update matrix position with X" do
       # Arrange
       board = described_class.new
 

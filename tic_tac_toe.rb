@@ -27,6 +27,12 @@ class Tic_tac_toe
     return proto_grid
   end
 
+  def recieve_input
+    puts 'Please enter your move: '
+    move = gets.chomp
+    puts 'You have chosen '+ move + ''
+    return move
+  end
 
 end
 
