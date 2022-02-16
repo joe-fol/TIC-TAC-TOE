@@ -11,4 +11,4 @@ class Tic_tac_toe
 end
 
 x = Tic_tac_toe.new
-puts x.render_board
+# puts x.render_board

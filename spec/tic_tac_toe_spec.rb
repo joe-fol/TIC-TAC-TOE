@@ -6,10 +6,10 @@ describe Tic_tac_toe do
       board = described_class.new
 
       # Act
-      result = board.render_board
+      result = board.show_board
 
       # Assert
-      expect(result).to eq([[0, 0, 0], [0, 0 , 0], [0, 0, 0]])
+      expect(result).to eq([['A', 'B', 'C'], ['D', 'E' , 'F'], ['G', 'H', 'I']])
   end
 
   it "when player chooses matrix position A1, update matrix position with X" do
