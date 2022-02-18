@@ -1,7 +1,7 @@
 require_relative '../tic_tac_toe'
 
 describe Tic_tac_toe do
-  it "when show_board is called before any moves played" do
+  it "will return unnocuppied positions before any moves played" do
       # Arrange
       board = described_class.new
 
@@ -12,8 +12,7 @@ describe Tic_tac_toe do
       expect(result).to eq([['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])
   end
   
-  it 'when show_board is called,
-   the explicit results in the terminal' do
+  it 'will show unoccupied grid on the command line' do
     # Arrange
     board = described_class.new
 
@@ -24,12 +23,12 @@ describe Tic_tac_toe do
     expect{board.show_board}.to output(test_grid).to_stdout
   end
 
-  it "when player chooses matrix position A1, update matrix position with X" do
+  it "when player chooses matrix position A, update matrix position with X" do
       # Arrange
       board = described_class.new
 
       # Act
-      result = board.player_move
+      result = board.player_move('A')
 
       # Assert
       expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
@@ -47,3 +46,8 @@ describe Tic_tac_toe do
     expect(result).to eq("A")
   end
 end
+
+#Split into three classes 
+# player.rb - one class handles player input 
+# computer.rb - plays hands to win or tie
+# board.rb - tic tac toe, keeping the logic of the board

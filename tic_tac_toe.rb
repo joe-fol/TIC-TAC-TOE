@@ -22,7 +22,7 @@ class Tic_tac_toe
     end 
   end
   
-  def player_move
+  def player_move(position)
     proto_grid = [['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']] 
     return proto_grid
   end
