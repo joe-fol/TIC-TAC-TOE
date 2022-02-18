@@ -1,4 +1,4 @@
-class Tic_tac_toe
+class Board
   def initialize
     @grid = [['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
     @index_of_move
@@ -37,5 +37,5 @@ class Tic_tac_toe
 end
 
 
-x = Tic_tac_toe.new
+x = Board.new
 # puts x.render_board

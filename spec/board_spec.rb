@@ -1,6 +1,6 @@
-require_relative '../tic_tac_toe'
+require_relative '../board'
 
-describe Tic_tac_toe do
+describe Board do
   it "will return unnocuppied positions before any moves played" do
       # Arrange
       board = described_class.new
