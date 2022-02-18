@@ -26,4 +26,6 @@ end
 
 
 x = Board.new
-# puts x.render_board
+
+## show_board to show new game
+## update board will take input 

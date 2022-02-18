@@ -25,3 +25,9 @@ describe Player do
     end
 
 end
+## recieve input
+## taking input -> saving input 
+## player_move
+## looking up for key/value -> saving value 
+## show_board
+## using value to update board -> showing board
