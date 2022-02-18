@@ -13,21 +13,25 @@ describe Player do
         expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])
     end
     
-    it "when player puts desired input from the command line save to variable name, move" do 
+    it "this looks for if a string has been inputed by the player" do 
         # Arrange
         input = described_class.new
         
         # Act
         result = input.recieve_input
         
+        input_value = true
+
+        if result == ''
+            input_value = false
+        end
+
         # Assert
-        expect(result).to eq("A")
+        expect(input_value).to eq(false)
     end
 
 end
 ## recieve input
-## taking input -> saving input 
-## player_move
+## saving input 
 ## looking up for key/value -> saving value 
-## show_board
 ## using value to update board -> showing board
