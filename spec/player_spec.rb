@@ -18,7 +18,7 @@ describe Player do
         input = described_class.new
         
         # Act
-        result = input.recieve_input
+        result = input.validate_input
         
         input_value = true
 
@@ -27,8 +27,11 @@ describe Player do
         end
 
         # Assert
-        expect(input_value).to eq(false)
+        expect(input_value).to eq(true)
     end
+
+ 
+     
 
 end
 ## recieve input
