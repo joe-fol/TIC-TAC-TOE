@@ -31,7 +31,7 @@ describe Player do
 			expect(result).to eq('this is an invalid input')
 		end
 	
-	it 'when user input is received and value is not in the range A - I, throw error' do
+	it 'when user input has been validated, ' do
 		# Arrange
 		
 		# Act
