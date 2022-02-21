@@ -2,40 +2,40 @@
 require_relative '../player'
 
 describe Player do
+	before(:each) do
+		@player = Player.new
+	end
+
 	it "when user gives input 'A' the correct value is stored to the variable move" do
 			# Arrange
-			player = described_class.new
 			# Act
-			result = player.recieve_input
+			result = @player.recieve_input
 			# Assert
 			expect(result).to eq('A')
 	end
 
 	it 'when user input is received, value will be tested to be between A-I' do
 		# Arrange
-		player = described_class.new
 		# Act
-		move = player.recieve_input
-		result = player.validate_input(move) 
+		move = @player.recieve_input
+		result = @player.validate_input(move) 
 		# Assert
 		expect(result).to eq(true)
 	end
 	
 	it 'when user input is received and value is not in the range A - I, throw error' do
 			# Arrange
-			player = described_class.new
 			# Act
-			move = player.recieve_input
-			result = player.validate_input(move) 
+			move = @player.recieve_input
+			result = @player.validate_input(move) 
 			# Assert
 			expect(result).to eq('this is an invalid input')
 		end
 	
 	it 'after validation, take user input("A") and look up in board_hash' do
 		# Arrange
-		player = described_class.new
 		# Act
-		result = player.get_value('A')
+		result = @player.get_value('A')
 		# Assert
     expect(result).to eq([0, 0])
 	end

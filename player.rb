@@ -33,5 +33,11 @@ class Player
       'this is an invalid input'
     end
   end
+
+  def get_value(move)
+    if move == 'A'
+      return @board_hash['A']
+    end
+  end
     
 end
