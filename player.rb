@@ -17,7 +17,7 @@ class Player
     if possible_moves.include? move 
       return true
     else
-      return 'this is an invalid input'
+      'this is an invalid input'
     end
   end
     

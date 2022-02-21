@@ -2,43 +2,43 @@
 require_relative '../player'
 
 describe Player do
-    it "when user gives input 'A' the correct value is stored to the variable move" do
-        # Arrange
-        player = described_class.new
-        # Act
-        result = player.recieve_input
-        # Assert
-        expect(result).to eq('A')
-    end
+	it "when user gives input 'A' the correct value is stored to the variable move" do
+			# Arrange
+			player = described_class.new
+			# Act
+			result = player.recieve_input
+			# Assert
+			expect(result).to eq('A')
+	end
 
-    it 'when user input is received, value will be tested to be between A-I' do
-      # Arrange
-      player = described_class.new
-      # Act
-      move = player.recieve_input
-      result = player.validate_input(move) 
-      # Assert
-      expect(result).to eq(true)
-    end
-    
-    it 'when user input is received and value is not in the range A - I, throw error' do
-        # Arrange
-        player = described_class.new
-        # Act
-        move = player.recieve_input
-        result = player.validate_input(move) 
-        # Assert
-        expect(result).to eq('this is an invalid input')
-      end
-    
-      it 'when user input is received and value is not in the range A - I, throw error' do
-        # Arrange
-        
-        # Act
-        
-        # Assert
-    
-      end
+	it 'when user input is received, value will be tested to be between A-I' do
+		# Arrange
+		player = described_class.new
+		# Act
+		move = player.recieve_input
+		result = player.validate_input(move) 
+		# Assert
+		expect(result).to eq(true)
+	end
+	
+	it 'when user input is received and value is not in the range A - I, throw error' do
+			# Arrange
+			player = described_class.new
+			# Act
+			move = player.recieve_input
+			result = player.validate_input(move) 
+			# Assert
+			expect(result).to eq('this is an invalid input')
+		end
+	
+	it 'when user input is received and value is not in the range A - I, throw error' do
+		# Arrange
+		
+		# Act
+		
+		# Assert
+
+	end
 
 end
 ## looking up for key/value -> saving value 
