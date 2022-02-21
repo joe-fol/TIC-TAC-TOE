@@ -35,9 +35,7 @@ class Player
   end
 
   def get_value(move)
-    if move == 'A'
-      return @board_hash['A']
+      index = @board_hash[move]
     end
-  end
     
 end

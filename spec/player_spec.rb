@@ -37,7 +37,24 @@ describe Player do
 		# Act
 		result = @player.get_value('A')
 		# Assert
-    expect(result).to eq([0, 0])
+        expect(result).to eq([0, 0])
+	end
+
+    it 'after validation, take user input("B") and look up in board_hash' do
+		# Arrange
+		# Act
+		result = @player.get_value('B')
+		# Assert
+        expect(result).to eq([0, 1])
+	end
+    
+	it 'after validation, take user input dynamically and look up in board_hash' do
+		# Arrange
+		# Act
+		move = @player.recieve_input
+		result = @player.get_value(move)
+		# Assert
+        expect(result).to eq(true)
 	end
 
 end
