@@ -31,13 +31,13 @@ describe Player do
 			expect(result).to eq('this is an invalid input')
 		end
 	
-	it 'when user input has been validated, ' do
+	it 'after validation, take user input("A") and look up in board_hash' do
 		# Arrange
-		
+		player = described_class.new
 		# Act
-		
+		result = player.get_value('A')
 		# Assert
-
+    expect(result).to eq([0, 0])
 	end
 
 end

@@ -1,5 +1,5 @@
 class Player
-  def initialize(board_hash)
+  def initialize
     @board_hash = {
       "A" => [0, 0],
       "B" => [0, 1],
