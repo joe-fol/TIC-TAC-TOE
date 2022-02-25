@@ -12,6 +12,10 @@ class Board
     end 
   end
 
+  def update_board(index)
+    @grid[index[0][index[1]]] = "X"
+  end
+
 end
 
 

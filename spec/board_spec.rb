@@ -23,7 +23,18 @@ describe Board do
     # Assert
     expect{board.show_board}.to output(test_grid).to_stdout
   end
+
+  it 'will place an "X" at positon 0,0 on board' do 
+   # Arrange
+   board = described_class.new
+
+   # Act
+   result = board.update_board([index])
+
+   # Assert
+   expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])
 end
+end 
 
 #Split into three classes 
 # player.rb - one class handles player input 

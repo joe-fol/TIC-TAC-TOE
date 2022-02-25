@@ -31,6 +31,8 @@ class Player
 
   def get_value(move)
     index = @board_hash[move]
+    update_board(index)
+
   end
     
 end
