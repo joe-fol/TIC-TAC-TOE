@@ -13,11 +13,6 @@ class Player
     }
   end
 
-  def player_move(position)
-    proto_grid = [['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']] 
-    return proto_grid
-  end
-
   def recieve_input
     puts 'Please enter your move: '
     move = gets.chomp
@@ -35,7 +30,17 @@ class Player
   end
 
   def get_value(move)
-      index = @board_hash[move]
-    end
+    index = @board_hash[move]
+  end
     
 end
+  
+
+
+
+
+## random letter generator
+  # def random_letter_generator
+  #   random_letter = ('A'..'I').to_a.sample
+    # print 'random_letter <<<<<< ' + random_letter
+  #end
