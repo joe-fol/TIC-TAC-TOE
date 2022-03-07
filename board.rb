@@ -1,7 +1,7 @@
 class Board
   def initialize
+    
     @grid = [['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
-    @index_of_move
     
   end
 
@@ -12,14 +12,22 @@ class Board
     end 
   end
 
-  def update_board(index)
-    @grid[index[0][index[1]]] = "X"
+  def update_board(move)
+    move
   end
+
+  
 
 end
 
 
-x = Board.new
+
 
 ## show_board to show new game
 ## update board will take input 
+
+
+#def update_board(move)
+  # value = @player.get_value()
+  # puts value
+  # @grid[index[0][index[1]]] = "X"

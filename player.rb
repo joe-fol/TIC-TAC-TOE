@@ -1,5 +1,8 @@
+require_relative './board'
 class Player
   def initialize
+    @board = Board.new
+
     @board_hash = {
       "A" => [0, 0],
       "B" => [0, 1],
@@ -30,12 +33,16 @@ class Player
   end
 
   def get_value(move)
-    index = @board_hash[move]
-    update_board(index)
-
+    player_move = @board_hash[move]
+    @board.update_board(player_move)
   end
     
 end
+
+
+
+# test.Player.new
+# puts test.get_value('A')
   
 
 
@@ -46,3 +53,32 @@ end
   #   random_letter = ('A'..'I').to_a.sample
     # print 'random_letter <<<<<< ' + random_letter
   #end
+
+# class Main
+#   bar = Bar.new
+#   foo = Foo.new
+
+#   value = bar.get_value
+#   foo.do_something(value)
+# end
+
+# class Foo
+#   def initialize(bar)
+#     @bar = bar
+#   end
+
+#   def talk_to_bar
+#     @bar.talk_to_me!
+#   end
+
+#   def talk_to_me!; end
+#   end
+
+# class Bar
+#   def talk_to_foo
+#   end
+
+#   def talk_to_me!
+#     return that_useful_data_you_wanted
+#   end
+# end
