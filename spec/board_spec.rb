@@ -29,7 +29,7 @@ describe Board do
    board = described_class.new
 
    # Act
-   result = board.update_board([index])
+   result = board.update_board([0, 0])
 
    # Assert
    expect(result).to eq([['  X ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']])

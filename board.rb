@@ -1,8 +1,7 @@
 class Board
+  attr_accessor :grid
   def initialize
-    
     @grid = [['  A ', ' B ', ' C '], ['  D ', ' E ', ' F '], ['  G ', ' H ', ' I ']]
-    
   end
 
   def show_board
@@ -13,7 +12,8 @@ class Board
   end
 
   def update_board(move)
-    move
+    @grid[move[0]][move[1]] = '  X '
+    @grid
   end
 
   
